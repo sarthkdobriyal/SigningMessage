@@ -2,10 +2,13 @@ import Wallet from "./Wallet";
 import Transfer from "./Transfer";
 import "./App.scss";
 import { useState } from "react";
+// import Sign from "./Sign";
 
 function App() {
   const [balance, setBalance] = useState(0);
   const [address, setAddress] = useState("");
+  
+
 
   return (
     <div className="app">
@@ -15,7 +18,15 @@ function App() {
         address={address}
         setAddress={setAddress}
       />
-      <Transfer setBalance={setBalance} address={address} />
+      {/* <Sign 
+        address={address}
+        signature={signature}
+        setSignature={setSignature}
+        privateKey={privateKey}
+        setPrivateKey={setPrivateKey}
+      />  */}
+      <Transfer setBalance={setBalance}
+      />
     </div>
   );
 }
